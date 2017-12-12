@@ -1,0 +1,20 @@
+server:
+  port:
+    8761  #默认端口号
+
+spring:
+  application:
+    name: eureka   #应用名称
+
+security:
+  basic:
+    enabled: true  #认证开启
+  user:
+    name: lvzhihao  # 用户名
+    password: a123456   # 用户密码
+eureka:
+  client:
+    register-with-eureka: false  #不进行Eureka注册
+    fetch-registry: false  #不获取Eureka注册信息
+    service-url:
+      defaultZone: http://lvzhihao:a123456@localhost:8761/eureka  # 安全的注册地址

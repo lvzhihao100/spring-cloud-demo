@@ -1,0 +1,12 @@
+server:
+  port: 9300
+spring:
+  application:
+    name: provider-movie
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://lvzhihao:a123456@localhost:8761/eureka  # 安全的注册地址
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    prefer-ip-address: true
